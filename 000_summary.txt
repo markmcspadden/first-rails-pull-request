@@ -1,0 +1,17 @@
+Title
+Your 1st Rails Pull Request
+
+Summary
+You have been doing this Rails thing for a while and you're starting to feel like it's time to give back. Great! Now what?
+
+In this session we'll walk through the technical aspects of getting started with contributing back to Rails as well as the non-technical tips, tricks, and considerations to keep in mind along the way.
+
+Note
+I started 2012 with a goal: Submit a pull request to Rails every month. While my contributions didn't follow that exact pattern, I did end up with 10 total PRs, 9 of them accepted. Each one taught me something different, both about Rails and about the Rails community. I'd like to share those learnings and help those that are ready to contribute get from "I should do that" to "Submit PR" with less pain.
+
+I also expect to gather some feedback from the Core Team to share as well. ("If you could tweet one thing to a first time PR submitter what would it be?")
+
+Bio
+I'm the Technical Director of Sabre Travel Studios, the "labs" group at the mother of travel companies, Sabre. I also organize the Dallas Ruby Brigade and Big Ruby Conf and am a sucker for a good code contest.
+
+Off-screen, I enjoy cooking, eating, laughing, playing, and exploring the world with my wife and 2 young daughters.

@@ -1,0 +1,70 @@
+# Outline
+
+## Welcome
+
+## About Me
+* Job
+* Dallas Ruby
+* Big Ruby
+* Average Rails Developer
+    * My Start
+    * My 2012 Commitment
+    * My Results
+
+## About You
+* Raise Hands about Things
+    * Ever submitted a PR to Rails (accepted or not)
+    * Ever had a PR accepted
+
+## About Rails
+* ?Disclaimer: Rails is kind of old. I'm going to use PR and commit/contribute a little interchangably.
+* Org Chart (Core & Issues)
+* PR Stats
+    * Last Year
+    * Hotspots
+    * 95th percentile
+      * Accepted/Rejected/Open (for how long)
+
+## Why Contribute to Rails?
+
+## How to Contribute: The Steps
+
+1. Inspiration
+    * Experience
+    * Issues
+        * Last year stats
+        * Issues team
+
+2. Research
+    * GH Search
+    * Rails Core Group Search
+    * Google Search
+    * Other People's Issues
+        * Feel free to ask for more info
+        * This is hard
+
+3. Code
+    * Environment Setup
+    * Find the Code/Tests
+    * Write a Test
+    * Write some Code
+
+4. Review
+    * Introspective
+        * Does this make Rails better?
+        * Does this match the style of the code around it?
+        * Could this hurt performance? (Do I need to benchmark)
+    * Trsuted Peers
+        * This is a scary things. Friends help.
+
+5. Submit
+    * PR Writeup/Summary
+        * Explain yourself
+        * Link off to gists/performance
+    * Dual meaning here.
+
+
+
+
+
+
