@@ -2,6 +2,11 @@
 
 ## Welcome
 
+Your First Rails Pull Request
+
+"How-to submit a pull request to Rails without being a total jerk"
+"How-to submit a pull request to Rails without feeling like we are all going to laugh at you"
+
 ## About Me
 * Job
 * Dallas Ruby
@@ -27,6 +32,16 @@
 
 ## Why Contribute to Rails?
 
+1. Make the world better
+
+2. Make your life easier
+
+3. Better understand Rails
+    * You will REALLY understand this
+    * You get to see code samples from all of the biggest contributors to Rails
+
+4. To get famous :)
+
 ## How to Contribute: The Steps
 
 1. Inspiration
@@ -34,14 +49,15 @@
     * Issues
         * Last year stats
         * Issues team
+    * The smaller Rails projects
 
 2. Research
     * GH Search
     * Rails Core Group Search
     * Google Search
-    * Other People's Issues
-        * Feel free to ask for more info
-        * This is hard
+    x Other People's Issues
+        x Feel free to ask for more info
+        x This is hard
 
 3. Code
     * Environment Setup
@@ -61,7 +77,16 @@
     * PR Writeup/Summary
         * Explain yourself
         * Link off to gists/performance
-    * Dual meaning here.
+        * cc people (git blame to find them | issues teams)
+
+6. Wait, Respond, Repeat
+
+    * SQUASH YOUR COMMITS
+
+7. The Joy of Victory
+
+8. The Agony of Defeat
+    * YOU STILL WON
 
 
 

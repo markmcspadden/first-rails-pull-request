@@ -1,0 +1,1505 @@
+[
+  {
+    "url": "https://api.github.com/repos/rails/rails/issues/10077",
+    "labels_url": "https://api.github.com/repos/rails/rails/issues/10077/labels{/name}",
+    "comments_url": "https://api.github.com/repos/rails/rails/issues/10077/comments",
+    "events_url": "https://api.github.com/repos/rails/rails/issues/10077/events",
+    "html_url": "https://github.com/rails/rails/issues/10077",
+    "id": 12759235,
+    "number": 10077,
+    "title": "Hstore columns should always be saved, if changed or not",
+    "user": {
+      "login": "chrmod",
+      "id": 1228153,
+      "avatar_url": "https://secure.gravatar.com/avatar/8434b59c8bb7354ac486a8e71ab57051?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png",
+      "gravatar_id": "8434b59c8bb7354ac486a8e71ab57051",
+      "url": "https://api.github.com/users/chrmod",
+      "html_url": "https://github.com/chrmod",
+      "followers_url": "https://api.github.com/users/chrmod/followers",
+      "following_url": "https://api.github.com/users/chrmod/following",
+      "gists_url": "https://api.github.com/users/chrmod/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/chrmod/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/chrmod/subscriptions",
+      "organizations_url": "https://api.github.com/users/chrmod/orgs",
+      "repos_url": "https://api.github.com/users/chrmod/repos",
+      "events_url": "https://api.github.com/users/chrmod/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/chrmod/received_events",
+      "type": "User"
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+        "name": "activerecord",
+        "color": "0b02e1"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 3,
+    "created_at": "2013-04-03T15:59:00Z",
+    "updated_at": "2013-04-04T15:34:33Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": "https://github.com/rails/rails/pull/10077",
+      "diff_url": "https://github.com/rails/rails/pull/10077.diff",
+      "patch_url": "https://github.com/rails/rails/pull/10077.patch"
+    },
+    "body": "According to issue: https://github.com/rails/rails/issues/6127 changes to Hstore columns were not saved unless marked with __*_will_change!__. This Pull Request is going to fix that by introducing a list of columns that should always be saved if their were changed or not. \r\n\r\n__dirty_attribute_names__ is a class variable added to __dirty.rb__.\r\nIf a column name will be added to that list all then AR will always update that attribute. \r\n\r\nPotentially the __serialized_attributes__ may be managed with __dirty_attribute_names__ so we can have only one way to deal with those things. \r\n\r\nTested over ruby-2.0.0-p0 and postgresql 9.2.3."
+  },
+  {
+    "url": "https://api.github.com/repos/rails/rails/issues/10068",
+    "labels_url": "https://api.github.com/repos/rails/rails/issues/10068/labels{/name}",
+    "comments_url": "https://api.github.com/repos/rails/rails/issues/10068/comments",
+    "events_url": "https://api.github.com/repos/rails/rails/issues/10068/events",
+    "html_url": "https://github.com/rails/rails/issues/10068",
+    "id": 12739443,
+    "number": 10068,
+    "title": "Replace string eval with alternatives",
+    "user": {
+      "login": "kastiglione",
+      "id": 43429,
+      "avatar_url": "https://secure.gravatar.com/avatar/1004b266da7d0e375ed7cb88b6a79e7c?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png",
+      "gravatar_id": "1004b266da7d0e375ed7cb88b6a79e7c",
+      "url": "https://api.github.com/users/kastiglione",
+      "html_url": "https://github.com/kastiglione",
+      "followers_url": "https://api.github.com/users/kastiglione/followers",
+      "following_url": "https://api.github.com/users/kastiglione/following",
+      "gists_url": "https://api.github.com/users/kastiglione/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/kastiglione/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/kastiglione/subscriptions",
+      "organizations_url": "https://api.github.com/users/kastiglione/orgs",
+      "repos_url": "https://api.github.com/users/kastiglione/repos",
+      "events_url": "https://api.github.com/users/kastiglione/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/kastiglione/received_events",
+      "type": "User"
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/rails/rails/labels/activesupport",
+        "name": "activesupport",
+        "color": "FC9300"
+      }
+    ],
+    "state": "open",
+    "assignee": {
+      "login": "tenderlove",
+      "id": 3124,
+      "avatar_url": "https://secure.gravatar.com/avatar/f29327647a9cff5c69618bae420792ea?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png",
+      "gravatar_id": "f29327647a9cff5c69618bae420792ea",
+      "url": "https://api.github.com/users/tenderlove",
+      "html_url": "https://github.com/tenderlove",
+      "followers_url": "https://api.github.com/users/tenderlove/followers",
+      "following_url": "https://api.github.com/users/tenderlove/following",
+      "gists_url": "https://api.github.com/users/tenderlove/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tenderlove/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tenderlove/subscriptions",
+      "organizations_url": "https://api.github.com/users/tenderlove/orgs",
+      "repos_url": "https://api.github.com/users/tenderlove/repos",
+      "events_url": "https://api.github.com/users/tenderlove/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tenderlove/received_events",
+      "type": "User"
+    },
+    "milestone": null,
+    "comments": 7,
+    "created_at": "2013-04-03T06:39:15Z",
+    "updated_at": "2013-04-06T22:33:51Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": "https://github.com/rails/rails/pull/10068",
+      "diff_url": "https://github.com/rails/rails/pull/10068.diff",
+      "patch_url": "https://github.com/rails/rails/pull/10068.patch"
+    },
+    "body": "Similar to @tenderlove's ed9e3f699ab3fac01ad9ef038847d1cdd4c9f063, this pull request swaps out `class_eval` of strings for dynamic methods, and replaces it using either `define_method` or `delegate`.\r\n\r\nI originally wrote this in January, for use in RubyMotion which doesn't support string eval. I didn't create a PR because at the time it seemed the preference was to use string eval when generating dynamic methods. If this is no longer the case, then perhaps there is interest in these changes.\r\n\r\nThis PR leaves `callbacks.rb` and `core_ext/module/delegation.rb` untouched. Rewriting their use of string eval would cause the code to be quite a bit less readable.\r\n\r\nI ran the tests using ruby 2.0.0p0."
+  },
+  {
+    "url": "https://api.github.com/repos/rails/rails/issues/10057",
+    "labels_url": "https://api.github.com/repos/rails/rails/issues/10057/labels{/name}",
+    "comments_url": "https://api.github.com/repos/rails/rails/issues/10057/comments",
+    "events_url": "https://api.github.com/repos/rails/rails/issues/10057/events",
+    "html_url": "https://github.com/rails/rails/issues/10057",
+    "id": 12723641,
+    "number": 10057,
+    "title": "Escape multibyte line terminators in JSON encoding",
+    "user": {
+      "login": "zackham",
+      "id": 4191,
+      "avatar_url": "https://secure.gravatar.com/avatar/e10a35d5f2a85c5f65fa848eaac48859?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png",
+      "gravatar_id": "e10a35d5f2a85c5f65fa848eaac48859",
+      "url": "https://api.github.com/users/zackham",
+      "html_url": "https://github.com/zackham",
+      "followers_url": "https://api.github.com/users/zackham/followers",
+      "following_url": "https://api.github.com/users/zackham/following",
+      "gists_url": "https://api.github.com/users/zackham/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zackham/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zackham/subscriptions",
+      "organizations_url": "https://api.github.com/users/zackham/orgs",
+      "repos_url": "https://api.github.com/users/zackham/repos",
+      "events_url": "https://api.github.com/users/zackham/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zackham/received_events",
+      "type": "User"
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/rails/rails/labels/activesupport",
+        "name": "activesupport",
+        "color": "FC9300"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 1,
+    "created_at": "2013-04-02T20:25:43Z",
+    "updated_at": "2013-04-16T07:38:05Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": "https://github.com/rails/rails/pull/10057",
+      "diff_url": "https://github.com/rails/rails/pull/10057.diff",
+      "patch_url": "https://github.com/rails/rails/pull/10057.patch"
+    },
+    "body": "Currently, json/encoding respects the JSON spec (as it should) which disallows \\n and \\r inside strings, escaping them as expected.\r\n\r\nUnfortunately, ECMA-262 (Javascript) disallows not only \\n and \\r in strings, but \"Line Terminators\" which includes U+2028 and U+2029. See here: http://bclary.com/2004/11/07/#a-7.3\r\n\r\nThis pull request adds U+2028 and U+2029 to be escaped.\r\n\r\n# Why? \r\n\r\nIt's very common to see something like this in a Rails template:\r\n\r\n```\r\n<script type=\"text/javascript\"> \r\nvar posts = <%= @posts.to_json %>;\r\n</script>\r\n```\r\n\r\nIf U+2028 or U+2029 are part of any attributes output in the to_json call, you will end up with an exception. In Chrome: Uncaught SyntaxError: Unexpected token ILLEGAL.\r\n\r\nIn other words, if one of your users pastes something into a textarea that happens to include these fancy unicode line terminators, and you run to_json on that model and stick it in a template, that page is probably broken now.\r\n\r\n# Why not?\r\n\r\nThis is JSON encoding, and the JSON spec is specific about how to encode strings. U+2028 and U+2029 don't get special treatment.\r\n\r\nThat being said, this is non-obvious, counterintuitive, and can be tough to debug (https://www.google.com/?q=u2028). \r\n\r\nWhat do you do in your apps to deal with this? Is there a convention I'm missing?"
+  },
+  {
+    "url": "https://api.github.com/repos/rails/rails/issues/10051",
+    "labels_url": "https://api.github.com/repos/rails/rails/issues/10051/labels{/name}",
+    "comments_url": "https://api.github.com/repos/rails/rails/issues/10051/comments",
+    "events_url": "https://api.github.com/repos/rails/rails/issues/10051/events",
+    "html_url": "https://github.com/rails/rails/issues/10051",
+    "id": 12711454,
+    "number": 10051,
+    "title": "asset_path ignores host configuration when called outside of view",
+    "user": {
+      "login": "KurtPreston",
+      "id": 485884,
+      "avatar_url": "https://secure.gravatar.com/avatar/28b6dc90d1c68fc8cf6fbb1fe313e77b?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png",
+      "gravatar_id": "28b6dc90d1c68fc8cf6fbb1fe313e77b",
+      "url": "https://api.github.com/users/KurtPreston",
+      "html_url": "https://github.com/KurtPreston",
+      "followers_url": "https://api.github.com/users/KurtPreston/followers",
+      "following_url": "https://api.github.com/users/KurtPreston/following",
+      "gists_url": "https://api.github.com/users/KurtPreston/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/KurtPreston/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/KurtPreston/subscriptions",
+      "organizations_url": "https://api.github.com/users/KurtPreston/orgs",
+      "repos_url": "https://api.github.com/users/KurtPreston/repos",
+      "events_url": "https://api.github.com/users/KurtPreston/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/KurtPreston/received_events",
+      "type": "User"
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/rails/rails/labels/actionpack",
+        "name": "actionpack",
+        "color": "FFF700"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 7,
+    "created_at": "2013-04-02T15:50:34Z",
+    "updated_at": "2013-04-12T10:03:31Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "When you configure an asset_host and/or asset_prefix, the ```asset_path``` command  should return asset URLs relative to that host.  For example:\r\n\r\n```\r\n  config.action_controller.asset_host = 'http://mycdn'\r\n  config.assets.prefix = '/prefix/assets'\r\n\r\n  asset_path('example.png')\r\n  # returns http://mycdn/prefix/assets/example.png\r\n```\r\n\r\nThis works fine when called from views.  However, when called outside the context of a request, ```asset_path``` will ignore these configurations and instead return the local path.  For example:\r\n\r\n```\r\n  ActionController::Base.helpers.asset_path('example.png')\r\n  # returns /assets/example.png\r\n```"
+  },
+  {
+    "url": "https://api.github.com/repos/rails/rails/issues/10045",
+    "labels_url": "https://api.github.com/repos/rails/rails/issues/10045/labels{/name}",
+    "comments_url": "https://api.github.com/repos/rails/rails/issues/10045/comments",
+    "events_url": "https://api.github.com/repos/rails/rails/issues/10045/events",
+    "html_url": "https://github.com/rails/rails/issues/10045",
+    "id": 12698951,
+    "number": 10045,
+    "title": "document how to deploy to a subdirectory",
+    "user": {
+      "login": "senny",
+      "id": 5402,
+      "avatar_url": "https://secure.gravatar.com/avatar/3d698e2872c07061a455d9e250861235?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png",
+      "gravatar_id": "3d698e2872c07061a455d9e250861235",
+      "url": "https://api.github.com/users/senny",
+      "html_url": "https://github.com/senny",
+      "followers_url": "https://api.github.com/users/senny/followers",
+      "following_url": "https://api.github.com/users/senny/following",
+      "gists_url": "https://api.github.com/users/senny/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/senny/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/senny/subscriptions",
+      "organizations_url": "https://api.github.com/users/senny/orgs",
+      "repos_url": "https://api.github.com/users/senny/repos",
+      "events_url": "https://api.github.com/users/senny/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/senny/received_events",
+      "type": "User"
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/rails/rails/labels/docs",
+        "name": "docs",
+        "color": "02d7e1"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 2,
+    "created_at": "2013-04-02T10:23:30Z",
+    "updated_at": "2013-04-02T17:41:22Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": "https://github.com/rails/rails/pull/10045",
+      "diff_url": "https://github.com/rails/rails/pull/10045.diff",
+      "patch_url": "https://github.com/rails/rails/pull/10045.patch"
+    },
+    "body": "This should help to prevent situations as described in #2992.\r\n\r\nCurrently I did not cover how to handle incoming requests. I'm not sure what situations we need to cover as there can be different setups (HTTP Proxy, edit `config.ru`)\r\n\r\nCurrently there are many blog posts, stackoverflow questions and issues related to deploying into a subdirectory. As the mechanics changed slightly in the past not all resources are correct leaving most users confused. I think it's importent to cover this in the official docs so that users can lookup the steps for different versions.\r\n\r\nThis is only a scaffold. Let me know if you have content or copy suggestions."
+  },
+  {
+    "url": "https://api.github.com/repos/rails/rails/issues/10044",
+    "labels_url": "https://api.github.com/repos/rails/rails/issues/10044/labels{/name}",
+    "comments_url": "https://api.github.com/repos/rails/rails/issues/10044/comments",
+    "events_url": "https://api.github.com/repos/rails/rails/issues/10044/events",
+    "html_url": "https://github.com/rails/rails/issues/10044",
+    "id": 12698022,
+    "number": 10044,
+    "title": "Unnecessary sql generation on a belongs_to association",
+    "user": {
+      "login": "ketan",
+      "id": 10598,
+      "avatar_url": "https://secure.gravatar.com/avatar/a14a99a1c573fc5a68f6232a28dfbb4c?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png",
+      "gravatar_id": "a14a99a1c573fc5a68f6232a28dfbb4c",
+      "url": "https://api.github.com/users/ketan",
+      "html_url": "https://github.com/ketan",
+      "followers_url": "https://api.github.com/users/ketan/followers",
+      "following_url": "https://api.github.com/users/ketan/following",
+      "gists_url": "https://api.github.com/users/ketan/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/ketan/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/ketan/subscriptions",
+      "organizations_url": "https://api.github.com/users/ketan/orgs",
+      "repos_url": "https://api.github.com/users/ketan/repos",
+      "events_url": "https://api.github.com/users/ketan/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/ketan/received_events",
+      "type": "User"
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+        "name": "activerecord",
+        "color": "0b02e1"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 1,
+    "created_at": "2013-04-02T09:54:16Z",
+    "updated_at": "2013-04-02T13:06:39Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "It seems that loading a belongs_to association generates unnecessary sql. Here is how my models look:\r\n\r\n```ruby\r\nclass Post < ActiveRecord::Base\r\n  has_many :comments\r\nend\r\n\r\nclass Comment < ActiveRecord::Base\r\n  belongs_to :post\r\n  attr_accessible :post_id\r\nend\r\n```\r\nIf I were to execute some code to setup the test\r\n\r\n```ruby\r\nirb(main):095:0> post_id = Post.create.id\r\n   (0.1ms)  begin transaction\r\n  SQL (0.3ms)  INSERT INTO \"posts\" (\"content\", \"created_at\", \"title\", \"updated_at\") VALUES (?, ?, ?, ?)  [[\"content\", nil], [\"created_at\", Tue, 02 Apr 2013 09:51:46 UTC +00:00], [\"title\", nil], [\"updated_at\", Tue, 02 Apr 2013 09:51:46 UTC +00:00]]\r\n   (140.2ms)  commit transaction\r\n=> 18\r\nirb(main):096:0> comment_id = Comment.create(:post_id => post_id).id\r\n   (0.1ms)  begin transaction\r\n  SQL (0.4ms)  INSERT INTO \"comments\" (\"content\", \"created_at\", \"post_id\", \"updated_at\") VALUES (?, ?, ?, ?)  [[\"content\", nil], [\"created_at\", Tue, 02 Apr 2013 09:51:46 UTC +00:00], [\"post_id\", 18], [\"updated_at\", Tue, 02 Apr 2013 09:51:46 UTC +00:00]]\r\n   (291.5ms)  commit transaction\r\n=> 13\r\n```\r\n\r\nand resolve the post association from the comment (which in itself has been loaded through the association) it generates an additional sql when performing ```comment.post```\r\n\r\n```ruby\r\nirb(main):098:0*   post = Post.find(post_id)\r\n  Post Load (0.1ms)  SELECT \"posts\".* FROM \"posts\" WHERE \"posts\".\"id\" = ? LIMIT 1  [[\"id\", 18]]\r\n=> #<Post id: 18, title: nil, content: nil, created_at: \"2013-04-02 09:51:46\", updated_at: \"2013-04-02 09:51:46\">\r\nirb(main):099:0> comment = post.comments.find(comment_id)\r\n  Comment Load (0.1ms)  SELECT \"comments\".* FROM \"comments\" WHERE \"comments\".\"post_id\" = 18 AND \"comments\".\"id\" = ? LIMIT 1  [[\"id\", 13]]\r\n=> #<Comment id: 13, content: nil, post_id: 18, created_at: \"2013-04-02 09:51:46\", updated_at: \"2013-04-02 09:51:46\">\r\nirb(main):100:0>\r\nirb(main):101:0*   comment.post\r\n  Post Load (0.1ms)  SELECT \"posts\".* FROM \"posts\" WHERE \"posts\".\"id\" = 18 LIMIT 1\r\n=> #<Post id: 18, title: nil, content: nil, created_at: \"2013-04-02 09:51:46\", updated_at: \"2013-04-02 09:51:46\">\r\nirb(main):102:0>\r\n\r\n```"
+  },
+  {
+    "url": "https://api.github.com/repos/rails/rails/issues/10040",
+    "labels_url": "https://api.github.com/repos/rails/rails/issues/10040/labels{/name}",
+    "comments_url": "https://api.github.com/repos/rails/rails/issues/10040/comments",
+    "events_url": "https://api.github.com/repos/rails/rails/issues/10040/events",
+    "html_url": "https://github.com/rails/rails/issues/10040",
+    "id": 12687240,
+    "number": 10040,
+    "title": "Add SSE functionality for rails based on AC::Live",
+    "user": {
+      "login": "dahakawang",
+      "id": 2820550,
+      "avatar_url": "https://secure.gravatar.com/avatar/0db59fdbeae5fc6676f11b13343ceb32?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png",
+      "gravatar_id": "0db59fdbeae5fc6676f11b13343ceb32",
+      "url": "https://api.github.com/users/dahakawang",
+      "html_url": "https://github.com/dahakawang",
+      "followers_url": "https://api.github.com/users/dahakawang/followers",
+      "following_url": "https://api.github.com/users/dahakawang/following",
+      "gists_url": "https://api.github.com/users/dahakawang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dahakawang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dahakawang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dahakawang/orgs",
+      "repos_url": "https://api.github.com/users/dahakawang/repos",
+      "events_url": "https://api.github.com/users/dahakawang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dahakawang/received_events",
+      "type": "User"
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/rails/rails/labels/actionpack",
+        "name": "actionpack",
+        "color": "FFF700"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 2,
+    "created_at": "2013-04-02T01:59:25Z",
+    "updated_at": "2013-04-03T10:20:11Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": "https://github.com/rails/rails/pull/10040",
+      "diff_url": "https://github.com/rails/rails/pull/10040.diff",
+      "patch_url": "https://github.com/rails/rails/pull/10040.patch"
+    },
+    "body": "This class is an initial implementation of HTML5 SSE for rails. Currently we provide 2 kinds of ways to implement a SSE server. The first is controller level SSE, in which we do not distinguish clients and will send data to all the clients that subscribe the same sse source.\r\nThe second is client level SSE, which we DO distinguish clients and the data sent to different client can be totally different.\r\n\r\n## Controlller level SSE:\r\n\r\n```ruby\r\nclass MySSE < ActionController::Base\r\n  include ActionController::Live\r\n  include ActionController::ServerSentEvents\r\n  extend ActionController::ServerSentEvents::ClassMethods\r\nend\r\n```\r\nin this way, an action named ```sse_source``` will be created automaticlly and you can use ```MySSE.send_sse``` or ```MySSE.send_sse_hash``` to send event to all clients that subscribed the sse_source (you should register the action in route.rb manually)\r\n\r\n## Client level SSE(Session awared):\r\n\r\n```ruby\r\nclass MySSE < ActionController::Base\r\n  include ActionController::Live\r\n  include ActionController::ServerSentEvents\r\n\r\n  def event\r\n    start_serve do |sse_client|\r\n      # we can access some session variables here\r\n      sse_client.send_sse sse\r\n      sse_client.send_sse_hash :data => \"david\"\r\n    end\r\n    \r\n  end\r\nend\r\n```\r\nPlease note that Controller level SSE and Client level SSE are not meant to\r\nwork together in the same controller.\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/rails/rails/issues/10039",
+    "labels_url": "https://api.github.com/repos/rails/rails/issues/10039/labels{/name}",
+    "comments_url": "https://api.github.com/repos/rails/rails/issues/10039/comments",
+    "events_url": "https://api.github.com/repos/rails/rails/issues/10039/events",
+    "html_url": "https://github.com/rails/rails/issues/10039",
+    "id": 12686117,
+    "number": 10039,
+    "title": "ThreadError: deadlock, recursive locking",
+    "user": {
+      "login": "mperham",
+      "id": 2911,
+      "avatar_url": "https://secure.gravatar.com/avatar/af54a0871600db7fbdbb5c558a6e29a3?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png",
+      "gravatar_id": "af54a0871600db7fbdbb5c558a6e29a3",
+      "url": "https://api.github.com/users/mperham",
+      "html_url": "https://github.com/mperham",
+      "followers_url": "https://api.github.com/users/mperham/followers",
+      "following_url": "https://api.github.com/users/mperham/following",
+      "gists_url": "https://api.github.com/users/mperham/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/mperham/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/mperham/subscriptions",
+      "organizations_url": "https://api.github.com/users/mperham/orgs",
+      "repos_url": "https://api.github.com/users/mperham/repos",
+      "events_url": "https://api.github.com/users/mperham/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/mperham/received_events",
+      "type": "User"
+    },
+    "labels": [
+
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 3,
+    "created_at": "2013-04-02T01:07:17Z",
+    "updated_at": "2013-04-16T17:51:18Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "We get this very rarely when running our Sidekiq jobs:\r\n\r\n```\r\n/usr/local/rbenv/versions/1.9.3-p374/lib/ruby/1.9.1/monitor.rb:185:in `lock`\r\n/usr/local/rbenv/versions/1.9.3-p374/lib/ruby/1.9.1/monitor.rb:185:in `mon_enter`\r\n/usr/local/rbenv/versions/1.9.3-p374/lib/ruby/1.9.1/monitor.rb:209:in `mon_synchronize`\r\n[GEM_ROOT]/gems/activerecord-3.2.12/lib/active_record/connection_adapters/abstract/connection_pool.rb:119:in `release_connection`\r\n[GEM_ROOT]/gems/activerecord-3.2.12/lib/active_record/connection_adapters/abstract/connection_pool.rb:387:in `block in clear_active_connections!`\r\n[GEM_ROOT]/gems/activerecord-3.2.12/lib/active_record/connection_adapters/abstract/connection_pool.rb:387:in `each_value`\r\n[GEM_ROOT]/gems/activerecord-3.2.12/lib/active_record/connection_adapters/abstract/connection_pool.rb:387:in `clear_active_connections!`\r\n[GEM_ROOT]/gems/activerecord-3.2.12/lib/active_record/connection_adapters/abstract/connection_specification.rb:184:in `clear_active_connections!`\r\n[GEM_ROOT]/gems/sidekiq-2.9.0/lib/sidekiq/middleware/server/active_record.rb:8:in `ensure in call`\r\n[GEM_ROOT]/gems/sidekiq-2.9.0/lib/sidekiq/middleware/server/active_record.rb:8:in `call`\r\n[GEM_ROOT]/gems/sidekiq-2.9.0/lib/sidekiq/middleware/chain.rb:111:in `block in invoke`\r\n[GEM_ROOT]/gems/sidekiq-2.9.0/lib/sidekiq/middleware/server/retry_jobs.rb:50:in `call`\r\n[GEM_ROOT]/gems/sidekiq-2.9.0/lib/sidekiq/middleware/chain.rb:111:in `block in invoke`\r\n[GEM_ROOT]/gems/sidekiq-2.9.0/lib/sidekiq/middleware/server/logging.rb:11:in `block in call`\r\n[GEM_ROOT]/gems/sidekiq-2.9.0/lib/sidekiq/logging.rb:22:in `with_context`\r\n[GEM_ROOT]/gems/sidekiq-2.9.0/lib/sidekiq/middleware/server/logging.rb:7:in `call`\r\n[GEM_ROOT]/gems/sidekiq-2.9.0/lib/sidekiq/middleware/chain.rb:111:in `block in invoke`\r\n[GEM_ROOT]/gems/sidekiq-2.9.0/lib/sidekiq/middleware/chain.rb:114:in `call`\r\n[GEM_ROOT]/gems/sidekiq-2.9.0/lib/sidekiq/middleware/chain.rb:114:in `invoke`\r\n[GEM_ROOT]/gems/sidekiq-2.9.0/lib/sidekiq/processor.rb:48:in `block (2 levels) in process`\r\n[GEM_ROOT]/gems/sidekiq-2.9.0/lib/sidekiq/processor.rb:87:in `stats`\r\n[GEM_ROOT]/gems/sidekiq-2.9.0/lib/sidekiq/processor.rb:47:in `block in process`\r\n[GEM_ROOT]/gems/celluloid-0.12.4/lib/celluloid/calls.rb:23:in `call`\r\n```"
+  },
+  {
+    "url": "https://api.github.com/repos/rails/rails/issues/10024",
+    "labels_url": "https://api.github.com/repos/rails/rails/issues/10024/labels{/name}",
+    "comments_url": "https://api.github.com/repos/rails/rails/issues/10024/comments",
+    "events_url": "https://api.github.com/repos/rails/rails/issues/10024/events",
+    "html_url": "https://github.com/rails/rails/issues/10024",
+    "id": 12654316,
+    "number": 10024,
+    "title": "cookie can't be shared between subdomains of lvh.me",
+    "user": {
+      "login": "khoan",
+      "id": 45188,
+      "avatar_url": "https://secure.gravatar.com/avatar/6e0ed765699d27f1302adff76bc18b0e?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png",
+      "gravatar_id": "6e0ed765699d27f1302adff76bc18b0e",
+      "url": "https://api.github.com/users/khoan",
+      "html_url": "https://github.com/khoan",
+      "followers_url": "https://api.github.com/users/khoan/followers",
+      "following_url": "https://api.github.com/users/khoan/following",
+      "gists_url": "https://api.github.com/users/khoan/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/khoan/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/khoan/subscriptions",
+      "organizations_url": "https://api.github.com/users/khoan/orgs",
+      "repos_url": "https://api.github.com/users/khoan/repos",
+      "events_url": "https://api.github.com/users/khoan/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/khoan/received_events",
+      "type": "User"
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/rails/rails/labels/actionpack",
+        "name": "actionpack",
+        "color": "FFF700"
+      },
+      {
+        "url": "https://api.github.com/repos/rails/rails/labels/needs+feedback",
+        "name": "needs feedback",
+        "color": "ededed"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 3,
+    "created_at": "2013-04-01T07:19:07Z",
+    "updated_at": "2013-04-11T21:49:00Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "This regular expression globs lvh.me subdomains.\r\n\r\nhttps://github.com/rails/rails/blob/master/actionpack/lib/action_dispatch/middleware/cookies.rb#L174\r\n\r\nHence, for lvh.me cookies are set with domain: \".lvh.me\", whereas for subdomain.lvh.me domain: \".subdomain.lvh.me\" is set instead."
+  },
+  {
+    "url": "https://api.github.com/repos/rails/rails/issues/10020",
+    "labels_url": "https://api.github.com/repos/rails/rails/issues/10020/labels{/name}",
+    "comments_url": "https://api.github.com/repos/rails/rails/issues/10020/comments",
+    "events_url": "https://api.github.com/repos/rails/rails/issues/10020/events",
+    "html_url": "https://github.com/rails/rails/issues/10020",
+    "id": 12645600,
+    "number": 10020,
+    "title": "Fixes #9884. Change date order (month , day , year) in locale/en.yml.",
+    "user": {
+      "login": "kennyj",
+      "id": 13426,
+      "avatar_url": "https://secure.gravatar.com/avatar/1f0b221851379759360d7130dabdfa53?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png",
+      "gravatar_id": "1f0b221851379759360d7130dabdfa53",
+      "url": "https://api.github.com/users/kennyj",
+      "html_url": "https://github.com/kennyj",
+      "followers_url": "https://api.github.com/users/kennyj/followers",
+      "following_url": "https://api.github.com/users/kennyj/following",
+      "gists_url": "https://api.github.com/users/kennyj/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/kennyj/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/kennyj/subscriptions",
+      "organizations_url": "https://api.github.com/users/kennyj/orgs",
+      "repos_url": "https://api.github.com/users/kennyj/repos",
+      "events_url": "https://api.github.com/users/kennyj/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/kennyj/received_events",
+      "type": "User"
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/rails/rails/labels/actionview",
+        "name": "actionview",
+        "color": "d7e102"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 4,
+    "created_at": "2013-03-31T18:24:26Z",
+    "updated_at": "2013-04-07T09:37:42Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": "https://github.com/rails/rails/pull/10020",
+      "diff_url": "https://github.com/rails/rails/pull/10020.diff",
+      "patch_url": "https://github.com/rails/rails/pull/10020.patch"
+    },
+    "body": "Please see #9884.\r\n\r\nIt seems that en-US people usually use month - day - year format, but date order in locale/en.yml is year - month -day. "
+  },
+  {
+    "url": "https://api.github.com/repos/rails/rails/issues/10018",
+    "labels_url": "https://api.github.com/repos/rails/rails/issues/10018/labels{/name}",
+    "comments_url": "https://api.github.com/repos/rails/rails/issues/10018/comments",
+    "events_url": "https://api.github.com/repos/rails/rails/issues/10018/events",
+    "html_url": "https://github.com/rails/rails/issues/10018",
+    "id": 12644385,
+    "number": 10018,
+    "title": "Refactoring the ``expanded`` method in the paths module.",
+    "user": {
+      "login": "wangjohn",
+      "id": 1075780,
+      "avatar_url": "https://secure.gravatar.com/avatar/ddbca6015f428461aa5ed3b5f0fb74ab?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png",
+      "gravatar_id": "ddbca6015f428461aa5ed3b5f0fb74ab",
+      "url": "https://api.github.com/users/wangjohn",
+      "html_url": "https://github.com/wangjohn",
+      "followers_url": "https://api.github.com/users/wangjohn/followers",
+      "following_url": "https://api.github.com/users/wangjohn/following",
+      "gists_url": "https://api.github.com/users/wangjohn/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/wangjohn/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/wangjohn/subscriptions",
+      "organizations_url": "https://api.github.com/users/wangjohn/orgs",
+      "repos_url": "https://api.github.com/users/wangjohn/repos",
+      "events_url": "https://api.github.com/users/wangjohn/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/wangjohn/received_events",
+      "type": "User"
+    },
+    "labels": [
+
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 2,
+    "created_at": "2013-03-31T16:35:53Z",
+    "updated_at": "2013-03-31T17:40:39Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": "https://github.com/rails/rails/pull/10018",
+      "diff_url": "https://github.com/rails/rails/pull/10018.diff",
+      "patch_url": "https://github.com/rails/rails/pull/10018.patch"
+    },
+    "body": "I'm changing the ``expanded`` method to remove an unnecessary ``sort``. This ``sort`` was called on files from directories in the expanded file path. The ``sort`` shouldn't matter because the method simply returns all unique values of the expanded file path.\r\n\r\nI've also refactored the rest of the code a little bit. In particular, I am using ``map`` instead of concatenating to an array. "
+  },
+  {
+    "url": "https://api.github.com/repos/rails/rails/issues/10006",
+    "labels_url": "https://api.github.com/repos/rails/rails/issues/10006/labels{/name}",
+    "comments_url": "https://api.github.com/repos/rails/rails/issues/10006/comments",
+    "events_url": "https://api.github.com/repos/rails/rails/issues/10006/events",
+    "html_url": "https://github.com/rails/rails/issues/10006",
+    "id": 12630442,
+    "number": 10006,
+    "title": "Update csrf_helper.rb (KISS)",
+    "user": {
+      "login": "homakov",
+      "id": 174693,
+      "avatar_url": "https://secure.gravatar.com/avatar/d2881b5d4c082996a62f23055b61956d?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png",
+      "gravatar_id": "d2881b5d4c082996a62f23055b61956d",
+      "url": "https://api.github.com/users/homakov",
+      "html_url": "https://github.com/homakov",
+      "followers_url": "https://api.github.com/users/homakov/followers",
+      "following_url": "https://api.github.com/users/homakov/following",
+      "gists_url": "https://api.github.com/users/homakov/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/homakov/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/homakov/subscriptions",
+      "organizations_url": "https://api.github.com/users/homakov/orgs",
+      "repos_url": "https://api.github.com/users/homakov/repos",
+      "events_url": "https://api.github.com/users/homakov/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/homakov/received_events",
+      "type": "User"
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/rails/rails/labels/actionpack",
+        "name": "actionpack",
+        "color": "FFF700"
+      },
+      {
+        "url": "https://api.github.com/repos/rails/rails/labels/actionview",
+        "name": "actionview",
+        "color": "d7e102"
+      }
+    ],
+    "state": "open",
+    "assignee": {
+      "login": "jeremy",
+      "id": 199,
+      "avatar_url": "https://secure.gravatar.com/avatar/24d2f8804e6bb4b7ea6bd11e0a586470?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png",
+      "gravatar_id": "24d2f8804e6bb4b7ea6bd11e0a586470",
+      "url": "https://api.github.com/users/jeremy",
+      "html_url": "https://github.com/jeremy",
+      "followers_url": "https://api.github.com/users/jeremy/followers",
+      "following_url": "https://api.github.com/users/jeremy/following",
+      "gists_url": "https://api.github.com/users/jeremy/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/jeremy/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/jeremy/subscriptions",
+      "organizations_url": "https://api.github.com/users/jeremy/orgs",
+      "repos_url": "https://api.github.com/users/jeremy/repos",
+      "events_url": "https://api.github.com/users/jeremy/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/jeremy/received_events",
+      "type": "User"
+    },
+    "milestone": null,
+    "comments": 3,
+    "created_at": "2013-03-30T14:10:59Z",
+    "updated_at": "2013-03-30T16:41:52Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": "https://github.com/rails/rails/pull/10006",
+      "diff_url": "https://github.com/rails/rails/pull/10006.diff",
+      "patch_url": "https://github.com/rails/rails/pull/10006.patch"
+    },
+    "body": "i want to propose a breaking change to make naming convention simpler. \r\nI never saw people to modify `request_forgery_protection_token`. Look at this code:\r\n```\r\n form_authenticity_token == params[request_forgery_protection_token] ||\r\n          form_authenticity_token == request.headers['X-CSRF-Token']\r\n```\r\nWhy param's name is variable but header name is constant? And, why default name is 'authenticity_token'? (In fact CSRF is about authorization, not authentication. So, this naming sucks).\r\n\r\nI propose to have X-CSRF-Token and csrf_token as constant names for CSRF token. Yes, completely constant in code. Such things are never modified. \r\n\r\nIt is a speaking name and developers will understand what does it exactly do. I never understood where is \"authenticity\" part in authenticity_token.\r\n\r\np.s. PR is not done, what do you think? "
+  },
+  {
+    "url": "https://api.github.com/repos/rails/rails/issues/10005",
+    "labels_url": "https://api.github.com/repos/rails/rails/issues/10005/labels{/name}",
+    "comments_url": "https://api.github.com/repos/rails/rails/issues/10005/comments",
+    "events_url": "https://api.github.com/repos/rails/rails/issues/10005/events",
+    "html_url": "https://github.com/rails/rails/issues/10005",
+    "id": 12629165,
+    "number": 10005,
+    "title": "asset_host is ignored",
+    "user": {
+      "login": "cheba",
+      "id": 7405,
+      "avatar_url": "https://secure.gravatar.com/avatar/4e8f0c94f83d60d19e830a7d8ce12c2e?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png",
+      "gravatar_id": "4e8f0c94f83d60d19e830a7d8ce12c2e",
+      "url": "https://api.github.com/users/cheba",
+      "html_url": "https://github.com/cheba",
+      "followers_url": "https://api.github.com/users/cheba/followers",
+      "following_url": "https://api.github.com/users/cheba/following",
+      "gists_url": "https://api.github.com/users/cheba/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/cheba/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/cheba/subscriptions",
+      "organizations_url": "https://api.github.com/users/cheba/orgs",
+      "repos_url": "https://api.github.com/users/cheba/repos",
+      "events_url": "https://api.github.com/users/cheba/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/cheba/received_events",
+      "type": "User"
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/rails/rails/labels/needs+feedback",
+        "name": "needs feedback",
+        "color": "ededed"
+      },
+      {
+        "url": "https://api.github.com/repos/rails/rails/labels/asset+pipeline",
+        "name": "asset pipeline",
+        "color": "d7e102"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 2,
+    "created_at": "2013-03-30T11:59:07Z",
+    "updated_at": "2013-03-30T18:26:14Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "Rails 4 ignores asset_host config option.\r\n\r\n### Steps to reproduce\r\n\r\n* Create new Rails 4 app:\r\n  \r\n  ```\r\n  mkdir r4 && cd r4\r\n  rvm use 1.9.3@rails4-asset_host-test --rvmrc --create\r\n  gem i rails -v '4.0.0.beta1' --no-ri --no-rdoc\r\n  rails new .\r\n  ```\r\n* Uncomment `asset_host` option line in `config/environments/production.rb`\r\n* Make your application stylesheet go through SASS: `mv app/assets/stylesheets/application.css app/assets/stylesheets/application.css.sass`\r\n* Put the following code in your `app/assets/stylesheets/application.css.sass`\r\n  \r\n  ```sass\r\n  .rails-logo\r\n      background: image-url('rails.png')\r\n  ```\r\n* Run `bin/rake assets:precompile`\r\n* Find compiled stylesheet in `public/assets/application-*.css` and see that there's no asset host in `background` declaration.\r\n\r\n### Expected result\r\n\r\nI expected it to work in the same way as in Rails 3. You can use the same scenario with latest Rails 3 and it produces URLs with asset host in compiled stylesheets."
+  },
+  {
+    "url": "https://api.github.com/repos/rails/rails/issues/10001",
+    "labels_url": "https://api.github.com/repos/rails/rails/issues/10001/labels{/name}",
+    "comments_url": "https://api.github.com/repos/rails/rails/issues/10001/comments",
+    "events_url": "https://api.github.com/repos/rails/rails/issues/10001/events",
+    "html_url": "https://github.com/rails/rails/issues/10001",
+    "id": 12625415,
+    "number": 10001,
+    "title": "Only use race_ttl if race_condition_ttl specified as cache option",
+    "user": {
+      "login": "tbeauvais",
+      "id": 121275,
+      "avatar_url": "https://secure.gravatar.com/avatar/b9e7fbe38429332a673cef7afae92507?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png",
+      "gravatar_id": "b9e7fbe38429332a673cef7afae92507",
+      "url": "https://api.github.com/users/tbeauvais",
+      "html_url": "https://github.com/tbeauvais",
+      "followers_url": "https://api.github.com/users/tbeauvais/followers",
+      "following_url": "https://api.github.com/users/tbeauvais/following",
+      "gists_url": "https://api.github.com/users/tbeauvais/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/tbeauvais/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/tbeauvais/subscriptions",
+      "organizations_url": "https://api.github.com/users/tbeauvais/orgs",
+      "repos_url": "https://api.github.com/users/tbeauvais/repos",
+      "events_url": "https://api.github.com/users/tbeauvais/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/tbeauvais/received_events",
+      "type": "User"
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/rails/rails/labels/activesupport",
+        "name": "activesupport",
+        "color": "FC9300"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2013-03-30T02:58:16Z",
+    "updated_at": "2013-03-30T10:32:36Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": "https://github.com/rails/rails/pull/10001",
+      "diff_url": "https://github.com/rails/rails/pull/10001.diff",
+      "patch_url": "https://github.com/rails/rails/pull/10001.patch"
+    },
+    "body": "When using a Redis cache store the following method intermittently caused a Redis::CommandError: ERR invalid expire time in SETEX, because it receives 0 as the expire time.\r\n\r\nWhen the race_condition_ttl option is not specified the race_ttl evaluates to 0. The result of this is then used in the conditional, but since 0 evaluates to true it falls into the \"if\" statement. When the write_entry(..) is called with a race_ttl * 2 as the expires_in it passes 0 for this option, which causes Redis to raise an exception.\r\n\r\nI see this condition when Time.now and entry.expires_at are the same.\r\n\r\n```ruby\r\n        def handle_expired_entry(entry, key, options)\r\n          if entry && entry.expired?\r\n            race_ttl = options[:race_condition_ttl].to_i\r\n            if race_ttl && (Time.now - entry.expires_at <= race_ttl)\r\n              # When an entry has :race_condition_ttl defined, put the stale entry back into the cache\r\n              # for a brief period while the entry is begin recalculated.\r\n              entry.expires_at = Time.now + race_ttl\r\n              write_entry(key, entry, :expires_in => race_ttl * 2)\r\n            else\r\n              delete_entry(key, options)\r\n            end\r\n            entry = nil\r\n          end\r\n          entry\r\n        end\r\n```\r\n\r\nThe fix is to just not set race_ttl unless the race_condition_ttl options is specified.\r\n "
+  },
+  {
+    "url": "https://api.github.com/repos/rails/rails/issues/9993",
+    "labels_url": "https://api.github.com/repos/rails/rails/issues/9993/labels{/name}",
+    "comments_url": "https://api.github.com/repos/rails/rails/issues/9993/comments",
+    "events_url": "https://api.github.com/repos/rails/rails/issues/9993/events",
+    "html_url": "https://github.com/rails/rails/issues/9993",
+    "id": 12593664,
+    "number": 9993,
+    "title": "Change AC::Live to use Rack hijack",
+    "user": {
+      "login": "dahakawang",
+      "id": 2820550,
+      "avatar_url": "https://secure.gravatar.com/avatar/0db59fdbeae5fc6676f11b13343ceb32?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png",
+      "gravatar_id": "0db59fdbeae5fc6676f11b13343ceb32",
+      "url": "https://api.github.com/users/dahakawang",
+      "html_url": "https://github.com/dahakawang",
+      "followers_url": "https://api.github.com/users/dahakawang/followers",
+      "following_url": "https://api.github.com/users/dahakawang/following",
+      "gists_url": "https://api.github.com/users/dahakawang/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/dahakawang/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/dahakawang/subscriptions",
+      "organizations_url": "https://api.github.com/users/dahakawang/orgs",
+      "repos_url": "https://api.github.com/users/dahakawang/repos",
+      "events_url": "https://api.github.com/users/dahakawang/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/dahakawang/received_events",
+      "type": "User"
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/rails/rails/labels/actionpack",
+        "name": "actionpack",
+        "color": "FFF700"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 1,
+    "created_at": "2013-03-29T02:48:35Z",
+    "updated_at": "2013-04-02T03:02:33Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": "https://github.com/rails/rails/pull/9993",
+      "diff_url": "https://github.com/rails/rails/pull/9993.diff",
+      "patch_url": "https://github.com/rails/rails/pull/9993.patch"
+    },
+    "body": ""
+  },
+  {
+    "url": "https://api.github.com/repos/rails/rails/issues/9992",
+    "labels_url": "https://api.github.com/repos/rails/rails/issues/9992/labels{/name}",
+    "comments_url": "https://api.github.com/repos/rails/rails/issues/9992/comments",
+    "events_url": "https://api.github.com/repos/rails/rails/issues/9992/events",
+    "html_url": "https://github.com/rails/rails/issues/9992",
+    "id": 12593582,
+    "number": 9992,
+    "title": "ActiveSupports implementation of String#blank? is inconsistent with Ruby MRI",
+    "user": {
+      "login": "SamSaffron",
+      "id": 5213,
+      "avatar_url": "https://secure.gravatar.com/avatar/3dcae8378d46c244172a115c28ca49ce?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png",
+      "gravatar_id": "3dcae8378d46c244172a115c28ca49ce",
+      "url": "https://api.github.com/users/SamSaffron",
+      "html_url": "https://github.com/SamSaffron",
+      "followers_url": "https://api.github.com/users/SamSaffron/followers",
+      "following_url": "https://api.github.com/users/SamSaffron/following",
+      "gists_url": "https://api.github.com/users/SamSaffron/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/SamSaffron/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/SamSaffron/subscriptions",
+      "organizations_url": "https://api.github.com/users/SamSaffron/orgs",
+      "repos_url": "https://api.github.com/users/SamSaffron/repos",
+      "events_url": "https://api.github.com/users/SamSaffron/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/SamSaffron/received_events",
+      "type": "User"
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/rails/rails/labels/activesupport",
+        "name": "activesupport",
+        "color": "FC9300"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 4,
+    "created_at": "2013-03-29T02:43:33Z",
+    "updated_at": "2013-04-05T03:24:19Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "I have been looking at some perf issues around a large amount of blank? calls we are seeing at Discourse. see: https://github.com/rails/rails/pull/9958\r\n\r\nI decided just to rewrite blank? in c for now, while we sort out what we do in AR and Active Support. \r\n\r\nhttps://github.com/SamSaffron/fast_blank\r\n\r\nWhile writing this I noticed the blank? implementation is not consistent with Ruby MRI.\r\n\r\n```\r\n[1] pry(main)> \"\\u2001\".blank?\r\n=> true\r\n[2] pry(main)> \"\\u2001\".strip.length\r\n=> 1\r\n\r\n#consistent\r\n[3] pry(main)> \"\\r\\n\\v\\f\\s\".strip.length\r\n=> 0\r\n[4] pry(main)> \"\\r\\n\\v\\f\\s\".blank?\r\n=> true\r\n\r\n```\r\n\r\nMeaning that my naive implementation that is consistent with strip etc, and could possibly be accepted into Ruby core is not a proper replacement for .blank?\r\n\r\nInterestingly onigaruma neglects a few unicode spaces, making it even inconsistent with itself.\r\n\r\n```\r\n # weird ass unicode crap\r\n    #\r\n    # 1680, 180e, 200B, FEFF is missing from blank?\r\n    #\r\n    \"\\u00A0\r\n    \\u2000\\u2001\\u2002\\u2003\\u2004\\u2005\r\n    \\u2006\\u2007\\u2008\\u2009\\u200A\\u202F\r\n    \\u205F\\u3000\r\n    \".blank?\r\n=> true\r\n```\r\n\r\nIs this unicode maddness really needed in blank? "
+  },
+  {
+    "url": "https://api.github.com/repos/rails/rails/issues/9990",
+    "labels_url": "https://api.github.com/repos/rails/rails/issues/9990/labels{/name}",
+    "comments_url": "https://api.github.com/repos/rails/rails/issues/9990/comments",
+    "events_url": "https://api.github.com/repos/rails/rails/issues/9990/events",
+    "html_url": "https://github.com/rails/rails/issues/9990",
+    "id": 12589857,
+    "number": 9990,
+    "title": "Change routing `normalize_path` regular expression to match /(:param)other_stuff fixes #8578",
+    "user": {
+      "login": "JonRowe",
+      "id": 162976,
+      "avatar_url": "https://secure.gravatar.com/avatar/d79fc498d7a5b2ce12180890247476f0?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png",
+      "gravatar_id": "d79fc498d7a5b2ce12180890247476f0",
+      "url": "https://api.github.com/users/JonRowe",
+      "html_url": "https://github.com/JonRowe",
+      "followers_url": "https://api.github.com/users/JonRowe/followers",
+      "following_url": "https://api.github.com/users/JonRowe/following",
+      "gists_url": "https://api.github.com/users/JonRowe/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/JonRowe/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/JonRowe/subscriptions",
+      "organizations_url": "https://api.github.com/users/JonRowe/orgs",
+      "repos_url": "https://api.github.com/users/JonRowe/repos",
+      "events_url": "https://api.github.com/users/JonRowe/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/JonRowe/received_events",
+      "type": "User"
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/rails/rails/labels/actionpack",
+        "name": "actionpack",
+        "color": "FFF700"
+      }
+    ],
+    "state": "open",
+    "assignee": {
+      "login": "pixeltrix",
+      "id": 6321,
+      "avatar_url": "https://secure.gravatar.com/avatar/b14001f2b40640dd6cb63f0e8f1f4869?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png",
+      "gravatar_id": "b14001f2b40640dd6cb63f0e8f1f4869",
+      "url": "https://api.github.com/users/pixeltrix",
+      "html_url": "https://github.com/pixeltrix",
+      "followers_url": "https://api.github.com/users/pixeltrix/followers",
+      "following_url": "https://api.github.com/users/pixeltrix/following",
+      "gists_url": "https://api.github.com/users/pixeltrix/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/pixeltrix/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/pixeltrix/subscriptions",
+      "organizations_url": "https://api.github.com/users/pixeltrix/orgs",
+      "repos_url": "https://api.github.com/users/pixeltrix/repos",
+      "events_url": "https://api.github.com/users/pixeltrix/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/pixeltrix/received_events",
+      "type": "User"
+    },
+    "milestone": null,
+    "comments": 2,
+    "created_at": "2013-03-28T23:39:41Z",
+    "updated_at": "2013-03-29T12:38:39Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": "https://github.com/rails/rails/pull/9990",
+      "diff_url": "https://github.com/rails/rails/pull/9990.diff",
+      "patch_url": "https://github.com/rails/rails/pull/9990.patch"
+    },
+    "body": "There is an issue where a scoped optional parameter is incorrectly being substituted when at the root of a route so as that it then doesn't match without the parameter at the root.\r\n\r\nThis is a change to the `normalize_path` regular expression to match trailing path parts in the scope to make parameters optional again. e.g.:\r\n\r\n    # before \r\n     /(:optional):required => (/:optional):required\r\n    # after (correct)\r\n    /(:optional):required => /(:optional):required\r\n\r\nFixes #8578"
+  },
+  {
+    "url": "https://api.github.com/repos/rails/rails/issues/9985",
+    "labels_url": "https://api.github.com/repos/rails/rails/issues/9985/labels{/name}",
+    "comments_url": "https://api.github.com/repos/rails/rails/issues/9985/comments",
+    "events_url": "https://api.github.com/repos/rails/rails/issues/9985/events",
+    "html_url": "https://github.com/rails/rails/issues/9985",
+    "id": 12583380,
+    "number": 9985,
+    "title": "change Hash#to_xml to convert xml with attribute and content properly",
+    "user": {
+      "login": "vipulnsward",
+      "id": 567626,
+      "avatar_url": "https://secure.gravatar.com/avatar/f459742822cf8347e83d5c445378a934?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png",
+      "gravatar_id": "f459742822cf8347e83d5c445378a934",
+      "url": "https://api.github.com/users/vipulnsward",
+      "html_url": "https://github.com/vipulnsward",
+      "followers_url": "https://api.github.com/users/vipulnsward/followers",
+      "following_url": "https://api.github.com/users/vipulnsward/following",
+      "gists_url": "https://api.github.com/users/vipulnsward/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/vipulnsward/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/vipulnsward/subscriptions",
+      "organizations_url": "https://api.github.com/users/vipulnsward/orgs",
+      "repos_url": "https://api.github.com/users/vipulnsward/repos",
+      "events_url": "https://api.github.com/users/vipulnsward/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/vipulnsward/received_events",
+      "type": "User"
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/rails/rails/labels/activesupport",
+        "name": "activesupport",
+        "color": "FC9300"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 4,
+    "created_at": "2013-03-28T20:44:46Z",
+    "updated_at": "2013-04-04T12:09:01Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": "https://github.com/rails/rails/pull/9985",
+      "diff_url": "https://github.com/rails/rails/pull/9985.diff",
+      "patch_url": "https://github.com/rails/rails/pull/9985.patch"
+    },
+    "body": "This is in response to #9965\r\n\r\nIt rightly parses something like\r\n```xml\r\n<varValue name=\"age\">25</varValue>\r\n```\r\nto\r\n```ruby \r\n{\"varValue\"=>{\"name\"=>\"age\", \"__content__\"=>\"25\"}}\r\n```"
+  },
+  {
+    "url": "https://api.github.com/repos/rails/rails/issues/9980",
+    "labels_url": "https://api.github.com/repos/rails/rails/issues/9980/labels{/name}",
+    "comments_url": "https://api.github.com/repos/rails/rails/issues/9980/comments",
+    "events_url": "https://api.github.com/repos/rails/rails/issues/9980/events",
+    "html_url": "https://github.com/rails/rails/issues/9980",
+    "id": 12574656,
+    "number": 9980,
+    "title": "Improve poor security recommendation in docs",
+    "user": {
+      "login": "stouset",
+      "id": 4338,
+      "avatar_url": "https://secure.gravatar.com/avatar/9ff064364151151cbce108b869e6e62d?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png",
+      "gravatar_id": "9ff064364151151cbce108b869e6e62d",
+      "url": "https://api.github.com/users/stouset",
+      "html_url": "https://github.com/stouset",
+      "followers_url": "https://api.github.com/users/stouset/followers",
+      "following_url": "https://api.github.com/users/stouset/following",
+      "gists_url": "https://api.github.com/users/stouset/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/stouset/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/stouset/subscriptions",
+      "organizations_url": "https://api.github.com/users/stouset/orgs",
+      "repos_url": "https://api.github.com/users/stouset/repos",
+      "events_url": "https://api.github.com/users/stouset/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/stouset/received_events",
+      "type": "User"
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/rails/rails/labels/activesupport",
+        "name": "activesupport",
+        "color": "FC9300"
+      },
+      {
+        "url": "https://api.github.com/repos/rails/rails/labels/docs",
+        "name": "docs",
+        "color": "02d7e1"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 2,
+    "created_at": "2013-03-28T17:17:37Z",
+    "updated_at": "2013-04-05T19:58:38Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": "https://github.com/rails/rails/pull/9980",
+      "diff_url": "https://github.com/rails/rails/pull/9980.diff",
+      "patch_url": "https://github.com/rails/rails/pull/9980.patch"
+    },
+    "body": "As reported in #9960, the current documentation recommends an insecure practice for\r\nkey generation from a password (a single round of SHA-256). The modified documentation\r\nuses ActiveSupport::KeyGenerator to perform proper key stretching."
+  },
+  {
+    "url": "https://api.github.com/repos/rails/rails/issues/9969",
+    "labels_url": "https://api.github.com/repos/rails/rails/issues/9969/labels{/name}",
+    "comments_url": "https://api.github.com/repos/rails/rails/issues/9969/comments",
+    "events_url": "https://api.github.com/repos/rails/rails/issues/9969/events",
+    "html_url": "https://github.com/rails/rails/issues/9969",
+    "id": 12562235,
+    "number": 9969,
+    "title": "Fail early with \"Primary key not included in the custom select clause\" i...",
+    "user": {
+      "login": "divineforest",
+      "id": 22360,
+      "avatar_url": "https://secure.gravatar.com/avatar/2fae2cf102cfaeab3d1b37bf11537617?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png",
+      "gravatar_id": "2fae2cf102cfaeab3d1b37bf11537617",
+      "url": "https://api.github.com/users/divineforest",
+      "html_url": "https://github.com/divineforest",
+      "followers_url": "https://api.github.com/users/divineforest/followers",
+      "following_url": "https://api.github.com/users/divineforest/following",
+      "gists_url": "https://api.github.com/users/divineforest/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/divineforest/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/divineforest/subscriptions",
+      "organizations_url": "https://api.github.com/users/divineforest/orgs",
+      "repos_url": "https://api.github.com/users/divineforest/repos",
+      "events_url": "https://api.github.com/users/divineforest/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/divineforest/received_events",
+      "type": "User"
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+        "name": "activerecord",
+        "color": "0b02e1"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2013-03-28T12:24:46Z",
+    "updated_at": "2013-03-28T12:24:46Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": "https://github.com/rails/rails/pull/9969",
+      "diff_url": "https://github.com/rails/rails/pull/9969.diff",
+      "patch_url": "https://github.com/rails/rails/pull/9969.patch"
+    },
+    "body": "...n find_in_batches\r\n\r\nBefore this patch find_in_batches raises this error only on second iteration. So you will know about the problem only when you get the batch size threshold."
+  },
+  {
+    "url": "https://api.github.com/repos/rails/rails/issues/9965",
+    "labels_url": "https://api.github.com/repos/rails/rails/issues/9965/labels{/name}",
+    "comments_url": "https://api.github.com/repos/rails/rails/issues/9965/comments",
+    "events_url": "https://api.github.com/repos/rails/rails/issues/9965/events",
+    "html_url": "https://github.com/rails/rails/issues/9965",
+    "id": 12547913,
+    "number": 9965,
+    "title": "[AS] XML behavior processing",
+    "user": {
+      "login": "leandronsp",
+      "id": 385640,
+      "avatar_url": "https://secure.gravatar.com/avatar/30f9297a1ec40eab1d7aa9b6d41b7350?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png",
+      "gravatar_id": "30f9297a1ec40eab1d7aa9b6d41b7350",
+      "url": "https://api.github.com/users/leandronsp",
+      "html_url": "https://github.com/leandronsp",
+      "followers_url": "https://api.github.com/users/leandronsp/followers",
+      "following_url": "https://api.github.com/users/leandronsp/following",
+      "gists_url": "https://api.github.com/users/leandronsp/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/leandronsp/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/leandronsp/subscriptions",
+      "organizations_url": "https://api.github.com/users/leandronsp/orgs",
+      "repos_url": "https://api.github.com/users/leandronsp/repos",
+      "events_url": "https://api.github.com/users/leandronsp/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/leandronsp/received_events",
+      "type": "User"
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/rails/rails/labels/activesupport",
+        "name": "activesupport",
+        "color": "FC9300"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 4,
+    "created_at": "2013-03-28T04:10:07Z",
+    "updated_at": "2013-03-28T16:10:19Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "## Scenario ##\r\nIf I have a xml like this:\r\n```xml\r\n<varValue name=\"age\">25</varValue>\r\n```\r\nRunning the 'from_xml' we get this:\r\n```ruby\r\nHash.from_xml(xml)\r\n=> {\"varValue\"=>\"25\"}\r\n\r\n# Losing my 'name' attribute :(\r\n```\r\n### Code ###\r\n.activesupport/lib/active_support/core_ext/hash/conversions.rb\r\n\r\nWhen the hash is being processed, this:\r\n```ruby\r\n{\"name\"=>\"age\", \"__content__\"=>\"25\"}\r\n```\r\n...is eligible for 'become_content'. Then ASupport ignores the 'name' attribute.\r\nI'd like to get something ***like*** this:\r\n```ruby\r\n{\"varValue\"=>{\"name\"=>\"age\", \"__content__\"=>\"25\"}}\r\n```\r\n### Initial solution ###\r\nI realized a solution for that by changing the **OR** clause for a **AND** clause.\r\nFrom:\r\n```ruby\r\ndef become_content?(value)                                                                                                        \r\nvalue['type'] == 'file' || (value['__content__'] && (value.keys.size == 1 || value['__content__'].present?))                    \r\nend\r\n```\r\nTo:\r\n```ruby\r\ndef become_content?(value)                                                                                                        \r\nvalue['type'] == 'file' || (value['__content__'] && (value.keys.size == 1 && value['__content__'].present?))                    \r\nend\r\n```\r\nSummarize:\r\n```\r\nvalue.keys.size == 1 && value['__content__'].present?\r\n```\r\nBut I don't know if this is the proper solution.\r\nWhat about it?\r\n\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/rails/rails/issues/9961",
+    "labels_url": "https://api.github.com/repos/rails/rails/issues/9961/labels{/name}",
+    "comments_url": "https://api.github.com/repos/rails/rails/issues/9961/comments",
+    "events_url": "https://api.github.com/repos/rails/rails/issues/9961/events",
+    "html_url": "https://github.com/rails/rails/issues/9961",
+    "id": 12543930,
+    "number": 9961,
+    "title": "Delete all on has many relationship",
+    "user": {
+      "login": "maletor",
+      "id": 138785,
+      "avatar_url": "https://secure.gravatar.com/avatar/ad093366b20e7b11217b02fc268be786?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png",
+      "gravatar_id": "ad093366b20e7b11217b02fc268be786",
+      "url": "https://api.github.com/users/maletor",
+      "html_url": "https://github.com/maletor",
+      "followers_url": "https://api.github.com/users/maletor/followers",
+      "following_url": "https://api.github.com/users/maletor/following",
+      "gists_url": "https://api.github.com/users/maletor/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/maletor/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/maletor/subscriptions",
+      "organizations_url": "https://api.github.com/users/maletor/orgs",
+      "repos_url": "https://api.github.com/users/maletor/repos",
+      "events_url": "https://api.github.com/users/maletor/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/maletor/received_events",
+      "type": "User"
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+        "name": "activerecord",
+        "color": "0b02e1"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 3,
+    "created_at": "2013-03-28T00:44:31Z",
+    "updated_at": "2013-04-19T20:49:11Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "My assumption is that I should be able to delete all ThreadSubscriptions when I delete an Alert, but instead an exception is raised \"ActiveRecord::HasManyThroughCantAssociateThroughHasOneOrManyReflection: Cannot modify association 'Alert#thread_subscriptions' because the source reflection class 'ThreadSubscription' is associated to 'Notification' via :has_many.\"\r\n\r\nIf I am able to SELECT from the association what exactly is preventing me to DELETE from them?\r\n\r\nhttps://gist.github.com/maletor/5259494#file-alert-rb-L23\r\n\r\n``` ruby\r\n# == Schema Information\r\n# Schema version: 20130325215115\r\n#\r\n# Table name: alerts\r\n#\r\n#  id          :integer          not null, primary key\r\n#  campaign_id :integer          not null\r\n#  headline    :string(255)      not null\r\n#  sponsor     :string(255)      not null\r\n#  body        :text             not null\r\n#  pi          :text             not null\r\n#  created_at  :datetime\r\n#  updated_at  :datetime\r\n#\r\n# Indexes\r\n#\r\n#  index_alerts_on_campaign_id  (campaign_id)\r\n#\r\n\r\nclass Alert < ActiveRecord::Base\r\n  include Subscribable\r\n  has_many :notifications, as: :subject, dependent: :delete_all\r\n  has_many :thread_subscriptions, through: :notifications, dependent: :delete_all\r\n  validates :campaign_id, :headline, :sponsor, :body, :pi,\r\n    presence: true\r\n\r\n  belongs_to :campaign\r\n\r\n  def priority\r\n    3\r\n  end\r\n\r\n  def expires_at\r\n    2.weeks.from_now\r\n  end\r\nend\r\n```\r\n\r\n``` ruby\r\n# == Schema Information\r\n# Schema version: 20130325215115\r\n#\r\n# Table name: notifications\r\n#\r\n#  id               :integer          not null, primary key\r\n#  user_id :integer          not null\r\n#  campaign_id      :integer          not null\r\n#  subject_id       :integer          not null\r\n#  subject_type     :string(255)      not null\r\n#  priority         :integer          not null\r\n#  expires_at       :datetime         not null\r\n#  reason           :string(255)      not null\r\n#  last_read_at     :datetime\r\n#  unread           :boolean          default(TRUE), not null\r\n#  created_at       :datetime\r\n#  updated_at       :datetime\r\n#\r\n# Indexes\r\n#\r\n#  index_notifications_on_campaign_id                  (campaign_id)\r\n#  index_notifications_on_user_id             (user_id)\r\n#  index_notifications_on_subject_id_and_subject_type  (subject_id,subject_type)\r\n#\r\n\r\nclass Notification < ActiveRecord::Base\r\n  belongs_to :subject, polymorphic: true\r\n  belongs_to :campaign\r\n  belongs_to :user\r\n  has_many :thread_subscriptions\r\n\r\n  validates :user_id, :campaign_id, :subject_id,\r\n    :subject_type, :priority, :expires_at, :reason, presence: true\r\nend\r\n```\r\n\r\n``` ruby\r\n# == Schema Information\r\n# Schema version: 20130325215115\r\n#\r\n# Table name: thread_subscriptions\r\n#\r\n#  id               :integer          not null, primary key\r\n#  notification_id  :integer          not null\r\n#  user_id :integer          not null\r\n#  subscribed       :boolean          default(TRUE), not null\r\n#  ignored          :boolean          default(FALSE), not null\r\n#  reason           :string(255)\r\n#  created_at       :datetime\r\n#  updated_at       :datetime\r\n#\r\n# Indexes\r\n#\r\n#  index_thread_subscriptions_on_user_id  (user_id)\r\n#  index_thread_subscriptions_on_notification_id   (notification_id)\r\n#\r\n\r\nclass ThreadSubscription < ActiveRecord::Base\r\n  belongs_to :user\r\n  belongs_to :notification\r\n  validates :user_id, :notification_id, presence: true\r\n  validates :subscribed, :ignored, inclusion: { in: [true, false] }\r\n  validates :subscribed, inclusion: { in: [true] }, unless: :ignored?\r\n  validates :subscribed, inclusion: { in: [false] }, if: :ignored?\r\n  validates :user_id, uniqueness: { scope: :notification_id }\r\nend\r\n```"
+  },
+  {
+    "url": "https://api.github.com/repos/rails/rails/issues/9957",
+    "labels_url": "https://api.github.com/repos/rails/rails/issues/9957/labels{/name}",
+    "comments_url": "https://api.github.com/repos/rails/rails/issues/9957/comments",
+    "events_url": "https://api.github.com/repos/rails/rails/issues/9957/events",
+    "html_url": "https://github.com/rails/rails/issues/9957",
+    "id": 12539936,
+    "number": 9957,
+    "title": "integer field type casting can bypass validating greater_than 0",
+    "user": {
+      "login": "pinbot",
+      "id": 229076,
+      "avatar_url": "https://secure.gravatar.com/avatar/b7c59af5aa7017b9ddf08920c8554177?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png",
+      "gravatar_id": "b7c59af5aa7017b9ddf08920c8554177",
+      "url": "https://api.github.com/users/pinbot",
+      "html_url": "https://github.com/pinbot",
+      "followers_url": "https://api.github.com/users/pinbot/followers",
+      "following_url": "https://api.github.com/users/pinbot/following",
+      "gists_url": "https://api.github.com/users/pinbot/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/pinbot/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/pinbot/subscriptions",
+      "organizations_url": "https://api.github.com/users/pinbot/orgs",
+      "repos_url": "https://api.github.com/users/pinbot/repos",
+      "events_url": "https://api.github.com/users/pinbot/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/pinbot/received_events",
+      "type": "User"
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/rails/rails/labels/activemodel",
+        "name": "activemodel",
+        "color": "00E5FF"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 11,
+    "created_at": "2013-03-27T22:38:09Z",
+    "updated_at": "2013-04-23T15:09:37Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "If foo is an **integer** and:\r\n```ruby\r\nclass BadValidation < ActiveRecord::Base\r\n\tvalidates :foo, :numericality => {:greater_than => 0}\r\nend\r\n```\r\nThen 1.9 results in 1 which is weirdish, but understandable and maybe a fair price for not validating only_integer.  Worse however, .9 results in a 0 value which is accepted and saved--even though the saved record will subsequently test as invalid.\r\n\r\nIt seems that the greater_than test is performed before type casting.  Being able to thus accidentally bypass validation definitely seems like a bug.\r\n\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/rails/rails/issues/9951",
+    "labels_url": "https://api.github.com/repos/rails/rails/issues/9951/labels{/name}",
+    "comments_url": "https://api.github.com/repos/rails/rails/issues/9951/comments",
+    "events_url": "https://api.github.com/repos/rails/rails/issues/9951/events",
+    "html_url": "https://github.com/rails/rails/issues/9951",
+    "id": 12516942,
+    "number": 9951,
+    "title": "Do not allow HTTP Basic Auth with Base64 encrypted blank credentials",
+    "user": {
+      "login": "lau",
+      "id": 12623,
+      "avatar_url": "https://secure.gravatar.com/avatar/4fe3d43ce3443af071aa880b9407c1ab?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png",
+      "gravatar_id": "4fe3d43ce3443af071aa880b9407c1ab",
+      "url": "https://api.github.com/users/lau",
+      "html_url": "https://github.com/lau",
+      "followers_url": "https://api.github.com/users/lau/followers",
+      "following_url": "https://api.github.com/users/lau/following",
+      "gists_url": "https://api.github.com/users/lau/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/lau/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/lau/subscriptions",
+      "organizations_url": "https://api.github.com/users/lau/orgs",
+      "repos_url": "https://api.github.com/users/lau/repos",
+      "events_url": "https://api.github.com/users/lau/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/lau/received_events",
+      "type": "User"
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/rails/rails/labels/actionpack",
+        "name": "actionpack",
+        "color": "FFF700"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2013-03-27T15:25:49Z",
+    "updated_at": "2013-03-27T15:25:49Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": "https://github.com/rails/rails/pull/9951",
+      "diff_url": "https://github.com/rails/rails/pull/9951.diff",
+      "patch_url": "https://github.com/rails/rails/pull/9951.patch"
+    },
+    "body": "In HTTP Basic Auth, blank credentials are not allowed. But today, if Base64 encryption is used, the login procedure block is called anyway. This PR fixes the issue and has tests. The issue was reported in #9172."
+  },
+  {
+    "url": "https://api.github.com/repos/rails/rails/issues/9948",
+    "labels_url": "https://api.github.com/repos/rails/rails/issues/9948/labels{/name}",
+    "comments_url": "https://api.github.com/repos/rails/rails/issues/9948/comments",
+    "events_url": "https://api.github.com/repos/rails/rails/issues/9948/events",
+    "html_url": "https://github.com/rails/rails/issues/9948",
+    "id": 12514409,
+    "number": 9948,
+    "title": "Uri::Parser support for malformed utf",
+    "user": {
+      "login": "printercu",
+      "id": 1144890,
+      "avatar_url": "https://secure.gravatar.com/avatar/bfb334bdcd963ba9f7de6338b237db9b?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png",
+      "gravatar_id": "bfb334bdcd963ba9f7de6338b237db9b",
+      "url": "https://api.github.com/users/printercu",
+      "html_url": "https://github.com/printercu",
+      "followers_url": "https://api.github.com/users/printercu/followers",
+      "following_url": "https://api.github.com/users/printercu/following",
+      "gists_url": "https://api.github.com/users/printercu/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/printercu/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/printercu/subscriptions",
+      "organizations_url": "https://api.github.com/users/printercu/orgs",
+      "repos_url": "https://api.github.com/users/printercu/repos",
+      "events_url": "https://api.github.com/users/printercu/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/printercu/received_events",
+      "type": "User"
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/rails/rails/labels/activesupport",
+        "name": "activesupport",
+        "color": "FC9300"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 0,
+    "created_at": "2013-03-27T14:35:22Z",
+    "updated_at": "2013-03-27T14:35:22Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": "https://github.com/rails/rails/pull/9948",
+      "diff_url": "https://github.com/rails/rails/pull/9948.diff",
+      "patch_url": "https://github.com/rails/rails/pull/9948.patch"
+    },
+    "body": "Uri parser throws error when url containing malformed utf is requested. You can try this one\r\n```ruby\r\nURI.unescape('/collection/all/product/Teutonia-Spirit-S3-прогу%BBочн%B0я')\r\n```\r\nIt's ok when it somewhere in app's code. But it's called from journey and server fails with 500.\r\nThis is just a little fix. May be better way would be rendering HTTP 400, but just do not throw exception."
+  },
+  {
+    "url": "https://api.github.com/repos/rails/rails/issues/9940",
+    "labels_url": "https://api.github.com/repos/rails/rails/issues/9940/labels{/name}",
+    "comments_url": "https://api.github.com/repos/rails/rails/issues/9940/comments",
+    "events_url": "https://api.github.com/repos/rails/rails/issues/9940/events",
+    "html_url": "https://github.com/rails/rails/issues/9940",
+    "id": 12469627,
+    "number": 9940,
+    "title": "Multiple accept headers' specificity is misinterpreted",
+    "user": {
+      "login": "ekampp",
+      "id": 40206,
+      "avatar_url": "https://secure.gravatar.com/avatar/798f66c6c7e53703e2a30ff911b0e884?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png",
+      "gravatar_id": "798f66c6c7e53703e2a30ff911b0e884",
+      "url": "https://api.github.com/users/ekampp",
+      "html_url": "https://github.com/ekampp",
+      "followers_url": "https://api.github.com/users/ekampp/followers",
+      "following_url": "https://api.github.com/users/ekampp/following",
+      "gists_url": "https://api.github.com/users/ekampp/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/ekampp/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/ekampp/subscriptions",
+      "organizations_url": "https://api.github.com/users/ekampp/orgs",
+      "repos_url": "https://api.github.com/users/ekampp/repos",
+      "events_url": "https://api.github.com/users/ekampp/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/ekampp/received_events",
+      "type": "User"
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/rails/rails/labels/actionpack",
+        "name": "actionpack",
+        "color": "FFF700"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 29,
+    "created_at": "2013-03-26T20:29:27Z",
+    "updated_at": "2013-04-01T17:04:34Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "The HTTP standard clearly states that higher specificity mime-types should take precedence, when multiple mimetypes is supplied. This is not the case with the current version of rails (cloned of master branch).\r\n\r\n    curl http://localhost:3000/entries --header \"Accept:application/json, text/plain\"\r\n\r\nshould return json, and in fact does so. While\r\n\r\n    curl http://localhost:3000/entries --header \"Accept:application/json, text/plain, */*\"\r\n\r\nshould still return json, since the `*/*` is less specific, but this returns html.\r\n\r\nHere is [a test application](https://github.com/ekampp/accept-header-specificity-test) where this can be tested."
+  },
+  {
+    "url": "https://api.github.com/repos/rails/rails/issues/9922",
+    "labels_url": "https://api.github.com/repos/rails/rails/issues/9922/labels{/name}",
+    "comments_url": "https://api.github.com/repos/rails/rails/issues/9922/comments",
+    "events_url": "https://api.github.com/repos/rails/rails/issues/9922/events",
+    "html_url": "https://github.com/rails/rails/issues/9922",
+    "id": 12409546,
+    "number": 9922,
+    "title": "Nested has_many throughs with default scopes don't work as expected",
+    "user": {
+      "login": "zephyr-dev",
+      "id": 1778835,
+      "avatar_url": "https://secure.gravatar.com/avatar/d541b1a02e460eb197c163092fb60781?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png",
+      "gravatar_id": "d541b1a02e460eb197c163092fb60781",
+      "url": "https://api.github.com/users/zephyr-dev",
+      "html_url": "https://github.com/zephyr-dev",
+      "followers_url": "https://api.github.com/users/zephyr-dev/followers",
+      "following_url": "https://api.github.com/users/zephyr-dev/following",
+      "gists_url": "https://api.github.com/users/zephyr-dev/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/zephyr-dev/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/zephyr-dev/subscriptions",
+      "organizations_url": "https://api.github.com/users/zephyr-dev/orgs",
+      "repos_url": "https://api.github.com/users/zephyr-dev/repos",
+      "events_url": "https://api.github.com/users/zephyr-dev/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/zephyr-dev/received_events",
+      "type": "User"
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+        "name": "activerecord",
+        "color": "0b02e1"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 6,
+    "created_at": "2013-03-25T17:01:02Z",
+    "updated_at": "2013-04-05T01:08:49Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "I have a model, Topic, which has 'conversations', a kind of message thread, and each conversation has many replies.\r\n\r\nThe replies inherit from conversations and just use a `parent_id` to point to the conversation that they are related to.\r\n\r\nThe Conversation model has a default scope of `parent_id: nil`, to enforce that they are roots and not replies. The Reply model has a default scope of `arel_table[:parent_id].not_eq(nil)` to enforce that they are replies.\r\n\r\nWhen I try to navigate from the Topic model to the replies directly, via\r\n```ruby\r\n  has_many :conversations\r\n  has_many :replies, through: :conversations\r\n```\r\nit produces the query:\r\n```sql\r\nSELECT \"conversations\".* FROM \"conversations\"\r\nINNER JOIN \"conversations\" \"conversations_replies_join\"\r\nON \"conversations\".\"parent_id\" = \"conversations_replies_join\".\"id\"\r\nWHERE \"conversations\".\"parent_id\" IS NULL\r\nAND \"conversations_replies_join\".\"topic_id\" = 1\r\nAND (\"conversations\".\"parent_id\" IS NOT NULL)\r\n```\r\n\r\nIt seems to be trying to enforce the default_scopes on the selected table `conversations` twice. Since we're trying to select the replies, it should not be enforcing the `WHERE \"conversations\".\"parent_id\" IS NULL` on this table, but on the `conversations_replies_join` table.\r\n\r\nI've made a repo that reproduces this bug with edge Rails [here](https://github.com/zephyr-dev/nested_association_with_default_scopes), with a failing test [here](https://github.com/zephyr-dev/nested_association_with_default_scopes/blob/master/test/models/topic_test.rb)."
+  },
+  {
+    "url": "https://api.github.com/repos/rails/rails/issues/9919",
+    "labels_url": "https://api.github.com/repos/rails/rails/issues/9919/labels{/name}",
+    "comments_url": "https://api.github.com/repos/rails/rails/issues/9919/comments",
+    "events_url": "https://api.github.com/repos/rails/rails/issues/9919/events",
+    "html_url": "https://github.com/rails/rails/issues/9919",
+    "id": 12407054,
+    "number": 9919,
+    "title": "Add support for nested query parameter in DATABASE_URL. Fix #9896.",
+    "user": {
+      "login": "kennyj",
+      "id": 13426,
+      "avatar_url": "https://secure.gravatar.com/avatar/1f0b221851379759360d7130dabdfa53?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png",
+      "gravatar_id": "1f0b221851379759360d7130dabdfa53",
+      "url": "https://api.github.com/users/kennyj",
+      "html_url": "https://github.com/kennyj",
+      "followers_url": "https://api.github.com/users/kennyj/followers",
+      "following_url": "https://api.github.com/users/kennyj/following",
+      "gists_url": "https://api.github.com/users/kennyj/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/kennyj/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/kennyj/subscriptions",
+      "organizations_url": "https://api.github.com/users/kennyj/orgs",
+      "repos_url": "https://api.github.com/users/kennyj/repos",
+      "events_url": "https://api.github.com/users/kennyj/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/kennyj/received_events",
+      "type": "User"
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+        "name": "activerecord",
+        "color": "0b02e1"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 1,
+    "created_at": "2013-03-25T16:06:34Z",
+    "updated_at": "2013-03-26T03:47:31Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": "https://github.com/rails/rails/pull/9919",
+      "diff_url": "https://github.com/rails/rails/pull/9919.diff",
+      "patch_url": "https://github.com/rails/rails/pull/9919.patch"
+    },
+    "body": "Please see #9896.\r\n\r\nWe often need to pass driver specific properties to JDBC adapter.\r\n\r\n```ruby\r\ndevelopment:\r\n  adapter: postgresql\r\n  ...\r\n  properties:\r\n    name: value\r\n```\r\n\r\nBut ENV[\"DATABASE_URL\"] can't pass such properties for same purpose. For example\r\n\r\n```ruby\r\nabstract://foo:123?encoding=utf8&properties%5Bname%5D=value\r\n  or\r\nabstract://foo:123?encoding=utf8&properties[name]=value\r\n```\r\n\r\n[BTW] my first version for this problem was 0ec6bc58d3d2149ac296496a04d7ceafe23f6067. But I thought AR shouldn't depend on `rack`\r\n"
+  },
+  {
+    "url": "https://api.github.com/repos/rails/rails/issues/9917",
+    "labels_url": "https://api.github.com/repos/rails/rails/issues/9917/labels{/name}",
+    "comments_url": "https://api.github.com/repos/rails/rails/issues/9917/comments",
+    "events_url": "https://api.github.com/repos/rails/rails/issues/9917/events",
+    "html_url": "https://github.com/rails/rails/issues/9917",
+    "id": 12404448,
+    "number": 9917,
+    "title": "specific length validator for ActiveRecord to respect `mark_for_destruction`.",
+    "user": {
+      "login": "senny",
+      "id": 5402,
+      "avatar_url": "https://secure.gravatar.com/avatar/3d698e2872c07061a455d9e250861235?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png",
+      "gravatar_id": "3d698e2872c07061a455d9e250861235",
+      "url": "https://api.github.com/users/senny",
+      "html_url": "https://github.com/senny",
+      "followers_url": "https://api.github.com/users/senny/followers",
+      "following_url": "https://api.github.com/users/senny/following",
+      "gists_url": "https://api.github.com/users/senny/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/senny/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/senny/subscriptions",
+      "organizations_url": "https://api.github.com/users/senny/orgs",
+      "repos_url": "https://api.github.com/users/senny/repos",
+      "events_url": "https://api.github.com/users/senny/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/senny/received_events",
+      "type": "User"
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+        "name": "activerecord",
+        "color": "0b02e1"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 1,
+    "created_at": "2013-03-25T15:14:48Z",
+    "updated_at": "2013-03-25T15:15:47Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": "https://github.com/rails/rails/pull/9917",
+      "diff_url": "https://github.com/rails/rails/pull/9917.diff",
+      "patch_url": "https://github.com/rails/rails/pull/9917.patch"
+    },
+    "body": "I implemented a separate validator to ensure that records, which are marked for destruction do not count when validating the length.\r\n\r\nI also noticed that AR already had specific length tests, which I moved into a separate test-case.\r\n\r\nThis is a fix for #7247."
+  },
+  {
+    "url": "https://api.github.com/repos/rails/rails/issues/9896",
+    "labels_url": "https://api.github.com/repos/rails/rails/issues/9896/labels{/name}",
+    "comments_url": "https://api.github.com/repos/rails/rails/issues/9896/comments",
+    "events_url": "https://api.github.com/repos/rails/rails/issues/9896/events",
+    "html_url": "https://github.com/rails/rails/issues/9896",
+    "id": 12368858,
+    "number": 9896,
+    "title": "Passing JDBC driver properties from DATABASE_URL",
+    "user": {
+      "login": "marclennox",
+      "id": 651620,
+      "avatar_url": "https://secure.gravatar.com/avatar/418c1dfecd028e05d8ce04466dc7aaa0?d=https://a248.e.akamai.net/assets.github.com%2Fimages%2Fgravatars%2Fgravatar-user-420.png",
+      "gravatar_id": "418c1dfecd028e05d8ce04466dc7aaa0",
+      "url": "https://api.github.com/users/marclennox",
+      "html_url": "https://github.com/marclennox",
+      "followers_url": "https://api.github.com/users/marclennox/followers",
+      "following_url": "https://api.github.com/users/marclennox/following",
+      "gists_url": "https://api.github.com/users/marclennox/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/marclennox/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/marclennox/subscriptions",
+      "organizations_url": "https://api.github.com/users/marclennox/orgs",
+      "repos_url": "https://api.github.com/users/marclennox/repos",
+      "events_url": "https://api.github.com/users/marclennox/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/marclennox/received_events",
+      "type": "User"
+    },
+    "labels": [
+      {
+        "url": "https://api.github.com/repos/rails/rails/labels/activerecord",
+        "name": "activerecord",
+        "color": "0b02e1"
+      }
+    ],
+    "state": "open",
+    "assignee": null,
+    "milestone": null,
+    "comments": 3,
+    "created_at": "2013-03-24T02:57:37Z",
+    "updated_at": "2013-03-25T15:53:33Z",
+    "closed_at": null,
+    "pull_request": {
+      "html_url": null,
+      "diff_url": null,
+      "patch_url": null
+    },
+    "body": "I'm not sure if this issue belongs in activerecord or in activerecord-jdbc-adapter, so apologies if I'm in the wrong repo.\r\n\r\nI'm working with Postgres JDBC adapter and I need to pass driver specific properties to the JDBC driver.\r\n\r\nI can do this fine in development using a database.yml that looks similar to this:\r\n\r\n```ruby\r\ndevelopment:\r\n  adapter: postgresql\r\n  ...\r\n  properties:\r\n    name: value\r\n```\r\n\r\nAll is good and the name=value pair ends up in the connection's nested :properties hash.\r\n\r\nHowever in production where I use the DATABASE_URL environment variable instead of database.yml, I can't figure out how to get the nested properties to the JDBC driver.  I've tried several permutations and combinations in the uri query parameters such as\r\n\r\n```ruby\r\n&name=value\r\n&properties[name]=value\r\n&properties/name=value\r\n&properties%name%5D=value\r\n```\r\n\r\nIn all cases the name=value properties do not end up in the connection's nested :properties hash as they do when using database.yml."
+  }
+]
